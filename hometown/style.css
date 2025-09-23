@@ -1,0 +1,366 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family:'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x:hidden;
+  scroll-padding-top:70px;
+}
+body{
+  background-color:var(--bg-color);
+  color:var(--text-color);
+}
+:root{
+  --bg-color: #f7efef;           
+  --text-color: #212951;              
+  --main-color:black;
+}
+.navbar{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position:fixed;
+  top:0;
+  left:0;
+  background: rgba(249, 230, 230, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 15px 8%;
+  height: 70px;
+  z-index:100;
+}
+.navbar span{
+  font-size:2rem;
+  color:var(--text-color);
+  font-family: 'Poppins';
+  transition: letter-spacing 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+.navbar span:hover{
+  letter-spacing: 2px;
+}
+.navbar ul{
+  display:flex;
+  align-items:center;
+  list-style: none;
+}
+.navbar ul li{
+  display: inline-block;
+  margin: 0 25px;
+}
+.navbar ul li a{
+  text-decoration:none;
+  position: relative;
+  color:var(--text-color);
+}
+.navbar ul li a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #3b4857;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+.navbar ul li a:hover{
+  color: #3b4857;
+}
+.navbar ul li a:hover::after{
+  transform:scaleX(1);
+}
+#menu-icon{
+  font-size:2.5rem;
+  color:var(--text-color);
+  display:none;
+  cursor:pointer;
+}
+#hometown.header{
+  width:100%;
+  min-height:100vh;
+  align-items: stretch;
+}
+.hometown-text{
+  flex-basis:45%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:3rem 5%;
+}
+.hometown-text h1{
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:var(--text-color);
+  transition: text-shadow 0.5s ease;
+  cursor:default;
+}
+.hometown-text h1:hover{
+  text-shadow: 0px 0px 10px #5f676e;
+}
+.hometown-text p{
+  line-height: 1.5;
+  text-align: justify;
+  font-size:1.1rem;
+}
+.button a{
+  display:inline-block;
+  text-decoration: none;
+  color:white;
+  background:var(--text-color);
+  border-radius: 10px;
+  padding:10px 20px;
+  font-size: 18px;
+  margin-top:20px;
+  transition: 0.3s ease-in-out;
+}
+.button a:hover{
+    box-shadow: 0 0 15px var(--text-color);
+    transform: scale(1.05);
+}
+.hometown-content{
+  display:flex;
+  align-items: stretch;
+  width:100%;
+  height: auto;
+}
+.hometown-img{
+  min-height: 100vh;
+}
+.hometown-img img{
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+.hometown-text a{
+  font-size: 1rem;
+  font-weight:600;
+  cursor:pointer;
+}
+#title.hometown-text h1{
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:var(--text-color);
+  transition: text-shadow 0.5s ease;
+  cursor:default;
+  text-align: center;
+  padding-top:10px;
+  margin-bottom: 10px;
+}
+#title.hometown-text h1:hover{
+  text-shadow: 0px 0px 10px #5f676e;
+}
+.menu-location{
+  display:flex;
+  align-items: center;
+  gap:0.5rem;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.menu-location i{
+  font-size:1.5rem;
+}
+section{
+  height: 100vh;
+}
+.towninfo{
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.infocontent{
+  transform: translateY(-20px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;  
+}
+.infocontent .w3-content{
+  width:50%;
+  margin-right: auto;
+  transform: translateX(10px);
+}
+.towninfo img{
+  width:100%;
+  max-height: 410px;
+  height:auto;
+}
+.infocontent .hometown-text{
+  flex-basis: 45%;
+  transform:translate(-40px,-40px);
+  justify-items: flex-end;
+  gap:2rem;
+}
+#foodbutton.button a{
+  display:inline-block;
+  text-decoration: none;
+  color:white;
+  background:var(--text-color);
+  border-radius: 10px;
+  padding:10px 20px;
+  font-size: 18px;
+  margin-top:20px;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    .header {
+        padding: 100px 5% 2rem;
+    }
+    .text-box {
+        margin-left: 0;
+        max-width: 55%; 
+    }
+    .hometown-content{
+      flex-direction: column;
+      text-align: center;
+    }
+    .hometown-img{
+      width:100%;
+      min-height: auto;
+      flex-basis: auto;
+      width: 100%;
+      margin:0 auto;
+    }
+    .hometown-text{
+      flex-basis: 100%;
+      padding:2rem 5%;
+    }
+    .button a{
+        margin-left: 0;
+    }
+    .towninfo{
+      height:auto;
+      padding:5rem 0;
+    }
+    .towninfo img{
+      max-height: 410px;
+    }
+    .infocontent{
+      flex-direction: column;
+      align-items: center;
+      transform: none;
+      padding:0;
+    }
+    .infocontent .w3-content{
+      width:90%;
+      transform: none;
+      margin:0;
+    }
+    .infocontent .hometown-text{
+      width:90%;
+      flex-basis: auto;
+      transform: none;
+      margin-top:2rem;
+      padding:0;
+      text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        padding: 1rem 0;
+        background: #f7efef;
+        flex-direction: column;
+        align-items: center;
+        transition: left 0.4s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .navbar ul.active {
+        left: 0;
+    }
+    .navbar ul li {
+        margin: 1rem 0;
+    }
+    .header {
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .text-box {
+        max-width: 100%;
+        margin-top: 1rem;
+        text-align:center;
+    }
+    .text-box p {
+        text-align: justify;
+    }
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+    .button a {
+        margin-left: 0;
+    }
+    .hometown-content{
+      padding-top:80px;
+      flex-direction: column;
+    }
+    .hometown-img{
+      width:100%;
+      min-height: auto;
+      flex-basis: auto;
+      width: 100%;
+      margin:0 auto;
+    }
+    .hometown-text{
+      padding:1rem 1rem;
+      text-align: center;
+    }
+    .hometown-text h1{
+      font-size: 2.4rem;
+    }
+    .hometown-text p{
+      margin-bottom: 3rem;
+    }
+    .towninfo{
+      height: auto;
+      padding:2rem 0;
+    }
+    .infocontent{
+      flex-direction: column;
+      align-items: center;
+      transform: none;
+    }
+    .infocontent .w3-content{
+      width:90%;
+      transform: none;
+      margin:0;
+    }
+    .infocontent .hometown-text{
+      width:90%;
+      flex-basis: auto;
+      transform:none;
+      margin-top: 1rem;
+      padding:0;
+      gap:0;
+      text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .hometown-text h1 {
+        font-size: 38px;
+    }
+    #title.hometown-text h1 {
+        font-size: 38px;
+    }
+    .towninfo img{
+      max-height: 200px;
+    }
+}
