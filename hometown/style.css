@@ -199,17 +199,6 @@ section{
   justify-items: flex-end;
   gap:2rem;
 }
-#foodbutton.button a{
-  display:inline-block;
-  text-decoration: none;
-  color:white;
-  background:var(--text-color);
-  border-radius: 10px;
-  padding:10px 20px;
-  font-size: 18px;
-  margin-top:20px;
-  transition: 0.3s ease-in-out;
-}
 @media (max-width: 1024px) {
     .navbar {
         padding: 15px 5%;
